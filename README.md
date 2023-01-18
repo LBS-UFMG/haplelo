@@ -15,3 +15,10 @@ Construído usando CodeIgniter 4.
 
 Para executar o servidor web, utilize o comando:
     php spark serve
+
+
+# Executando
+PHASE foi instalado em ./web/app/ThirdParty
+
+
+./PHASE -MS -f1 -S$RANDOM amostra.inp ./resultado/acre 400000 1000 50000
