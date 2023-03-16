@@ -99,7 +99,7 @@
 
     $(()=>{
         console.log('datatable:')
-        $('#resultado').datatable({
+        $('#resultado').DataTable({
             data: './data/'+'<?=$id?>'+'/final.csv'
         })
     })
