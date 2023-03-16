@@ -1,3 +1,5 @@
+<?php helper('App\Helpers\filtra_url'); ?>
+
 <!-- modelo para criação de views: copie este arquivo e apague os comentários -->
 <?= $this->extend('template') ?>
 
