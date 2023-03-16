@@ -49,23 +49,60 @@
 </div>
 <?php else: ?>
     <h1>The project is ready</h1>
-    <p class="text-muted">Download files:</p>
-    <ul>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/final.csv'))?>">final.csv</a></li>
 
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/halelos.csv'))?>">halelos.csv</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/pacientes.csv'))?>">pacientes.csv</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output'))?>">output</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_freqs'))?>">output_freqs</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_hbg'))?>">output_hbg</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_monitor'))?>">output_monitor</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_pairs'))?>">output_pairs</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_probs'))?>">output_probs</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_recom'))?>">output_recom</a></li>
-        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/log.txt'))?>">log.txt</a></li>
-    </ul>
+    <div class="row mt-4">
+        <div class="col-12 col-md-9">
+            <table class="table table-hover table-striped" id="resultado">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>patient_id</th>
+                        <th>1_haplotype</th>
+                        <th>1_enzymatic_activity</th>
+                        <th>1_allele</th>
+                        <th>1_score</th>
+                        <th>2_haplotype</th>
+                        <th>2_enzymatic_activity</th>
+                        <th>2_allele</th>
+                        <th>2_score</th>
+                        <th>total_score</th>
+                        <th>phenotype</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="col-12 col-md-3 p-2 bg-light">
+            <p class="text-muted">Download files:</p>
+            <ul>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/final.csv'))?>">final.csv</a></li>
+
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/halelos.csv'))?>">halelos.csv</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/pacientes.csv'))?>">pacientes.csv</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output'))?>">output</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_freqs'))?>">output_freqs</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_hbg'))?>">output_hbg</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_monitor'))?>">output_monitor</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_pairs'))?>">output_pairs</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_probs'))?>">output_probs</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_recom'))?>">output_recom</a></li>
+                <li><a href="<?=filtra_url(base_url('/data/'.$id.'/log.txt'))?>">log.txt</a></li>
+            </ul>
+        </div>
+    </div>
+    
 
 <?php endif; ?>
 
+<script>
+
+    $(()=>{
+        $('#resultado').datatable({
+            data: './data/'+<?=$id?>+'/final.csv'
+        })
+    })
+
+</script>
 
 <?= $this->endSection() ?>
