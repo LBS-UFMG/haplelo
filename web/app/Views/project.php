@@ -107,8 +107,10 @@
                     data: dados.split('\n')
                         .filter(j=>(j.substr(0,1) != ','))
                         .map(i=>{
-                        itens = i.split(',')
-                    })
+                            itens = i.split(',')
+                            console.log(itens)
+                            return i
+                        })
                 })
             })
         
