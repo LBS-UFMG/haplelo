@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <head>
+  <?php helper('App\Helpers\filtra_url'); ?>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php 
@@ -18,13 +20,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="<?= base_url('/css/estilo.css') ?>">
+  <link rel="stylesheet" href="<?= filtra_url(base_url('/css/estilo.css')) ?>">
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   
-  <?php helper('App\Helpers\filtra_url'); ?>
-
   <script src="<?= filtra_url(base_url('/js/main.js')) ?>"></script><!-- principal script -->
 
 </head>
@@ -53,7 +53,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li><a href="#" class="nav-link px-3 link-secondary" data-bs-target="#about" data-bs-toggle="modal"><span>About</span></a></li>
             <li><a href="<?= base_url('/') ?>" class="nav-link px-3 link-secondary"><span>Explore</span></a></li>
-            <li><a href="<?= base_url('/input/input.inp') ?>" class="nav-link px-3 link-secondary"><span>Example</span></a></li>
+            <li><a href="<?= filtra_url(base_url('/input/input.inp')) ?>" class="nav-link px-3 link-secondary"><span>Example</span></a></li>
             <li><a href="<?= base_url('') ?>" class="nav-link px-3 link-secondary"><span>Help</span></a></li>
           </ul><!-- /menu -->
 
