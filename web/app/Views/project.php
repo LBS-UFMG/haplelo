@@ -99,7 +99,7 @@
 
     $(()=>{
         fetch('<?=filtra_url(base_url("/data/$id/final.csv"))?>')
-            .then(response => response.json())
+            .then(response => response)
             .then(dados => {
 
                 console.log('datatable:', dados)
