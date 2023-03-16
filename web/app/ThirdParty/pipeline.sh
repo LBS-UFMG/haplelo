@@ -1,6 +1,6 @@
 id_projeto=$1
 phase='../app/ThirdParty/phase.2.1.1.linux/PHASE'  # linux
-phase='../app/ThirdParty/PHASE2.1.1/PHASE'  # macos
+#phase='../app/ThirdParty/PHASE2.1.1/PHASE'  # macos
 
 # etapa 1: executa o PHASE 
 $phase -MS -f1 -S$RANDOM "./data/$id_projeto/input.inp" ./data/$id_projeto/output 400000 1000 50000
