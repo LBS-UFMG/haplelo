@@ -1,10 +1,12 @@
+<?php helper('App\Helpers\filtra_url'); ?>
+
 <!-- MODAL: SOBRE -->
 <div class="modal fade" tabindex="-1" id="about" role="dialog">
   <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header bg-light">
         <div class="text-center">
-          <img width="150" class="me-3" src="<?php echo base_url('/img/logo_v5.svg'); ?>">
+          <img width="150" class="me-3" src="<?php echo filtra_url(base_url('/img/logo_v5.svg')); ?>">
           
         </div>
         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -57,8 +59,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <img height="50" class="me-3" src="<?php echo base_url('/img/dcc_b.svg'); ?>">
-        <img height="50"  class="me-3" src="<?php echo base_url('/img/ufmg_b.svg'); ?>">
+        <img height="50" class="me-3" src="<?php echo filtra_url(base_url('/img/dcc_b.svg')); ?>">
+        <img height="50"  class="me-3" src="<?php echo filtra_url(base_url('/img/ufmg_b.svg')); ?>">
 
         <button type="button" class="btn btn-primary py-4 px-5" data-bs-dismiss="modal">Fechar</button>
       </div>
