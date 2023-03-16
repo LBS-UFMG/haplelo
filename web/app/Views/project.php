@@ -109,7 +109,7 @@
                         .map(i=>{
                             itens = i.split(',')
                             console.log(itens)
-                            return i
+                            return [i]
                         })
                 })
             })
