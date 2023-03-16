@@ -104,8 +104,10 @@
 
                 // console.log('datatable:', dados)
                 $('#resultado').DataTable({
-                    data: dados.map(i=>{
-                        console.log(i,'bazinga')
+                    data: dados.split('\n')
+                        .filter(j=>(j.substr(0,1) != ','))
+                        .map(i=>{
+                        itens = i.split(',')
                     })
                 })
             })
