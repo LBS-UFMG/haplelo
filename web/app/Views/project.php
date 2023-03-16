@@ -51,6 +51,8 @@
     <h1>The project is ready</h1>
     <p class="text-muted">Download files:</p>
     <ul>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/final.csv'))?>">final.csv</a></li>
+
         <li><a href="<?=filtra_url(base_url('/data/'.$id.'/halelos.csv'))?>">halelos.csv</a></li>
         <li><a href="<?=filtra_url(base_url('/data/'.$id.'/pacientes.csv'))?>">pacientes.csv</a></li>
         <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output'))?>">output</a></li>
