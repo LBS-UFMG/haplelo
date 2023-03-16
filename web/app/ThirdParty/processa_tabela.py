@@ -1,13 +1,19 @@
 import pandas as pd
+import sys
+# id_projeto
 
-pacientes = pd.read_csv("./pacientes.csv", header=None)
+id_projeto = sys.argv[1]
+# ./data/$id_projeto/
+path = './data/'+id_projeto
+
+pacientes = pd.read_csv(path+"/pacientes.csv", header=None)
 pacientes.columns = ["patient_id", "h1", "h2"]
 
-halelos = pd.read_csv("./halelos.csv", header=None)
+halelos = pd.read_csv(path+"/halelos.csv", header=None)
 halelos.columns = ["n", "haplotype", "freq"]
 halelos_dict = dict(zip(halelos.n, halelos.haplotype))
 
-modelo = pd.read_csv("./model.csv", header=None)
+modelo = pd.read_csv(path+"/model.csv", header=None)
 modelo.columns = ["haplotype", "enzymatic_activity", "allele", "score"]
 modelo["score"] = pd.to_numeric(modelo["score"])
 
@@ -40,3 +46,5 @@ x["total_score"] = x["1_score"] + x["2_score"]
 
 x["phenotype"] = x.apply(lambda row: phenotype(row["total_score"]), axis=1)
 x.fillna("-")
+
+x.to_csv(path+'/final.csv')

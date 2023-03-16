@@ -19,12 +19,13 @@
             onde.textContent = minutes + ":" + seconds;
             if (--timer < 0) {
                 timer = 0;
+                window.location.href = "<?=base_url('/project/'.$id)?>";
             }
         }, 1000);
     }
 
     window.onload = function () {
-        let duracao = 60 * 1; // Converter para segundos
+        let duracao = 15 * 1; // Converter para segundos
         contar(duracao, local); // iniciando o timer
     };
 
@@ -34,9 +35,13 @@
 <?= $this->section('conteudo') ?>
 <!-- adicione o conteúdo principal aqui -->
 <div class="text-center text-muted my-5">
+
+    <div class="alert alert-success">Project ID <a href="<?=base_url('/project/'.$id)?>"><?=$id?></a> created.</div>
+
     <h1>Running...</h1>
     <h1 class="display-1" id="time"></h1>
     <p>Please, wait...</p>
+
 </div>
 
 <?= $this->endSection() ?>
