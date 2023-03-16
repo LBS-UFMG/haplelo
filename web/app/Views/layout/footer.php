@@ -1,6 +1,6 @@
 <footer>
   <hr class="mb-1">
-  <p class="small text-muted text-center me-2 mb-0">© 2022-<?=date('Y')?> | Desenvolvido por <a href="#" data-bs-toggle="modal" data-bs-target="#about" class="link-dark">LBS-UFMG</a>.</p>
+  <p class="small text-muted text-center me-2 mb-0">© 2022-<?=date('Y')?> | Haplelo v0.1 - Desenvolvido por <a href="#" data-bs-toggle="modal" data-bs-target="#about" class="link-dark">LBS-UFMG</a>.</p>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
