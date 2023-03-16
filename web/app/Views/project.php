@@ -98,10 +98,16 @@
 <script>
 
     $(()=>{
-        console.log('datatable:')
-        $('#resultado').DataTable({
-            data: './data/'+'<?=$id?>'+'/final.csv'
-        })
+        fetch(<?=filtra_url(base_url("/data/$id/final.csv"))?>)
+            .then(response => response.json())
+            .then(dados => {
+
+                console.log('datatable:', dados)
+                $('#resultado').DataTable({
+                    data: dados
+                })
+            })
+        
     })
 
 </script>
