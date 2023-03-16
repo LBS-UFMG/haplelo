@@ -102,9 +102,11 @@
             .then(response => response.text())
             .then(dados => {
 
-                console.log('datatable:', dados)
+                // console.log('datatable:', dados)
                 $('#resultado').DataTable({
-                    data: dados
+                    data: dados.map(i=>{
+                        console.log(i,'bazinga')
+                    })
                 })
             })
         
