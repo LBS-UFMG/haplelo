@@ -22,8 +22,10 @@
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  
+  <?php helper('App\Helpers\filtra_url'); ?>
 
-  <script src="<?= base_url('/js/main.js') ?>"></script><!-- principal script -->
+  <script src="<?= filtra_url(base_url('/js/main.js')) ?>"></script><!-- principal script -->
 
 </head>
 
@@ -35,7 +37,7 @@
 
         <!-- logo -->
         <a href="<?= base_url() ?>" title="Home" class="navbar-brand">
-          <img src="<?= base_url('/img/logo_v5.svg') ?>" style="max-width:200px" class="me-3">
+          <img src="<?= filtra_url(base_url('/img/logo_v5.svg')) ?>" style="max-width:200px" class="me-3">
         </a><!-- /logo -->
 
         <!-- menu sanduíche -->

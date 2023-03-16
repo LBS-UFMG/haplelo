@@ -25,7 +25,7 @@
     }
 
     window.onload = function () {
-        let duracao = 5 * 60 * 1; // Converter para segundos
+        let duracao = 10 * 60 * 1; // Converter para segundos
         contar(duracao, local); // iniciando o timer
     };
 
