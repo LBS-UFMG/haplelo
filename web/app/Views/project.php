@@ -51,7 +51,7 @@
     <h1>The project is ready</h1>
 
     <div class="row mt-4">
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-9 small">
             <table class="table table-hover table-striped" id="resultado">
                 <thead>
                     <tr>
@@ -98,8 +98,9 @@
 <script>
 
     $(()=>{
+        console.log('datatable:')
         $('#resultado').datatable({
-            data: './data/'+<?=$id?>+'/final.csv'
+            data: './data/'+'<?=$id?>'+'/final.csv'
         })
     })
 
