@@ -108,8 +108,8 @@
                         .filter(j=>(j.substr(0,1) != ','))
                         .map(i=>{
                             itens = i.split(',')
-                            console.log(itens)
-                            return [i]
+                            // console.log(itens)
+                            return itens
                         })
                 })
             })
