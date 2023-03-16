@@ -73,7 +73,7 @@
             </table>
         </div>
 
-        <div class="col-12 col-md-3 p-2 bg-light">
+        <div class="col-12 col-md-3 p-4 bg-light">
             <p class="text-muted">Download files:</p>
             <ul>
                 <li><a href="<?=filtra_url(base_url('/data/'.$id.'/final.csv'))?>">final.csv</a></li>
@@ -110,7 +110,8 @@
                             itens = i.split(',')
                             // console.log(itens)
                             return itens
-                        })
+                        }),
+                        pageLength: 25,
                 })
             })
         
