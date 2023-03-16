@@ -49,16 +49,16 @@
     <h1>The project is ready</h1>
     <p class="text-muted">Download files:</p>
     <ul>
-        <li><a href="<?=base_url('/data/'.$id.'/halelos.csv')?>">halelos.csv</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/pacientes.csv')?>">pacientes.csv</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output')?>">output</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_freqs')?>">output_freqs</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_hbg')?>">output_hbg</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_monitor')?>">output_monitor</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_pairs')?>">output_pairs</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_probs')?>">output_probs</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/output_recom')?>">output_recom</a></li>
-        <li><a href="<?=base_url('/data/'.$id.'/log.txt')?>">log.txt</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/halelos.csv'))?>">halelos.csv</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/pacientes.csv'))?>">pacientes.csv</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output'))?>">output</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_freqs'))?>">output_freqs</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_hbg'))?>">output_hbg</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_monitor'))?>">output_monitor</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_pairs'))?>">output_pairs</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_probs'))?>">output_probs</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/output_recom'))?>">output_recom</a></li>
+        <li><a href="<?=filtra_url(base_url('/data/'.$id.'/log.txt'))?>">log.txt</a></li>
     </ul>
 
 <?php endif; ?>
