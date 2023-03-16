@@ -12,7 +12,7 @@ sed --expression='/BEGIN LIST_SUMMARY/,/END LIST_SUMMARY/{ /LIST_SUMMARY/d; p }'
 sed --expression='/BEGIN BESTPAIRS_SUMMARY/,/END BESTPAIRS_SUMMARY/{ /BESTPAIRS_SUMMARY/d; p }' --quiet ./data/$id_projeto/output | tr ':(),' ' ' | sort | column -t | tr -s ' ' | tr ' ' , > ./data/$id_projeto/pacientes.csv
 
 # etapa 4: processa tabela
-python ../app/ThirdParty/processa_tabela.py $id_projeto
+python3 ../app/ThirdParty/processa_tabela.py $id_projeto
 
 echo "Project $id_projeto has run successfully." > ./data/$id_projeto/finished.txt
 

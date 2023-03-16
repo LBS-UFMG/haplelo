@@ -13,7 +13,7 @@ halelos = pd.read_csv(path+"/halelos.csv", header=None)
 halelos.columns = ["n", "haplotype", "freq"]
 halelos_dict = dict(zip(halelos.n, halelos.haplotype))
 
-modelo = pd.read_csv(path+"/model.csv", header=None)
+modelo = pd.read_csv("./input/model.csv", header=None)
 modelo.columns = ["haplotype", "enzymatic_activity", "allele", "score"]
 modelo["score"] = pd.to_numeric(modelo["score"])
 
