@@ -5,7 +5,22 @@
 
 <?= $this->section('scripts') ?>
 <!-- adicione links para scripts aqui -->
-<script>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('conteudo') ?>
+<!-- adicione o conteúdo principal aqui -->
+<?php if(!$ready): ?>
+
+<div class="text-center text-muted my-5">
+
+    <div class="alert alert-info small">This is project ID <a href="<?=base_url('/project/'.$id)?>"><?=$id?></a>. When processing is complete, this page will automatically refresh.</div>
+
+    <h1>PHASE is running...</h1>
+    <h1 class="display-1" id="time"></h1>
+    <p>Please, wait...</p>
+
+    <script>
     const local = document.querySelector('#time');
 
     function contar(duracao, onde) {
@@ -32,19 +47,6 @@
     };
 
 </script>
-<?= $this->endSection() ?>
-
-<?= $this->section('conteudo') ?>
-<!-- adicione o conteúdo principal aqui -->
-<?php if(!$ready): ?>
-
-<div class="text-center text-muted my-5">
-
-    <div class="alert alert-info small">This is project ID <a href="<?=base_url('/project/'.$id)?>"><?=$id?></a>. When processing is complete, this page will automatically refresh.</div>
-
-    <h1>PHASE is running...</h1>
-    <h1 class="display-1" id="time"></h1>
-    <p>Please, wait...</p>
 
 </div>
 <?php else: ?>
@@ -52,25 +54,28 @@
 
     <div class="row mt-4">
         <div class="col-12 col-md-9 small">
-            <table class="table table-hover table-striped" id="resultado">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>patient_id</th>
-                        <th>1_haplotype</th>
-                        <th>1_enzymatic_activity</th>
-                        <th>1_allele</th>
-                        <th>1_score</th>
-                        <th>2_haplotype</th>
-                        <th>2_enzymatic_activity</th>
-                        <th>2_allele</th>
-                        <th>2_score</th>
-                        <th>total_score</th>
-                        <th>phenotype</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="table-responsive">
+
+                <table class="table table-hover table-striped" id="resultado">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>patient_id</th>
+                            <th>1_haplotype</th>
+                            <th>1_enzymatic_activity</th>
+                            <th>1_allele</th>
+                            <th>1_score</th>
+                            <th>2_haplotype</th>
+                            <th>2_enzymatic_activity</th>
+                            <th>2_allele</th>
+                            <th>2_score</th>
+                            <th>total_score</th>
+                            <th>phenotype</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
 
         <div class="col-12 col-md-3 p-4 bg-light">
