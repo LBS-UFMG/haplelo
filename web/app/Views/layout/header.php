@@ -51,10 +51,9 @@
 
           <!-- menu -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li><a href="<?= base_url('/') ?>" class="nav-link px-3 link-secondary"><span>Try now</span></a></li>
+            <li><a href="<?= base_url('/index.php/example') ?>" class="nav-link px-3 link-secondary"><span>Example</span></a></li>
             <li><a href="#" class="nav-link px-3 link-secondary" data-bs-target="#about" data-bs-toggle="modal"><span>About</span></a></li>
-            <li><a href="<?= base_url('/') ?>" class="nav-link px-3 link-secondary"><span>Explore</span></a></li>
-            <li><a href="<?= filtra_url(base_url('/input/input.inp')) ?>" class="nav-link px-3 link-secondary"><span>Download input example</span></a></li>
-            <li><a href="<?= base_url('') ?>" class="nav-link px-3 link-secondary"><span>Help</span></a></li>
           </ul><!-- /menu -->
 
           <!-- buscar  -->
