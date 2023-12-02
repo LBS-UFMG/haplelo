@@ -59,7 +59,7 @@
                 <table class="table table-hover table-striped" id="resultado">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <!-- <th>#</th>
                             <th>patient_id</th>
                             <th>1_haplotype</th>
                             <th>1_enzymatic_activity</th>
@@ -70,7 +70,19 @@
                             <th>2_allele</th>
                             <th>2_score</th>
                             <th>total_score</th>
-                            <th>phenotype</th>
+                            <th>phenotype</th> -->
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Haplotype #1</th>
+                            <th>Enzymatic activity #1</th>
+                            <th>Allele #1</th>
+                            <th>Score #1</th>
+                            <th>Haplotype #2</th>
+                            <th>Enzymatic activity #2</th>
+                            <th>Allele #2</th>
+                            <th>Score #2</th>
+                            <th>Total Score</th>
+                            <th>Phenotype</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
